@@ -1,12 +1,10 @@
 /*
  * http://www.mycodes.net
  */
-
 // variables
 var $win = $(window);
 var clientWidth = $win.width();
 var clientHeight = $win.height();
-
 $(window).resize(function() {
     var newWidth = $win.width();
     var newHeight = $win.height();
@@ -14,7 +12,6 @@ $(window).resize(function() {
         location.replace(location);
     }
 });
-
 (function($) {
 	$.fn.typewriter = function() {
 		this.each(function() {
@@ -36,7 +33,6 @@ $(window).resize(function() {
 		return this;
 	};
 })(jQuery);
-
 function timeElapse(date){
 	var current = Date();
 	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
@@ -55,6 +51,6 @@ function timeElapse(date){
 	if (seconds < 10) {
 		seconds = "0" + seconds;
 	}
-	var result = "第 <span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 小时 <span class=\"digit\">" + minutes + "</span> 分钟 <span class=\"digit\">" + seconds + "</span> 秒"; 
+	var result = "<span class=\"digit\">" + days + "</span> Days <span class=\"digit\">" + hours + "</span> Hours <span class=\"digit\">" + minutes + "</span> Minutes <span class=\"digit\">" + seconds + "</span> Seconds"; 
 	$("#clock").html(result);
 }
